@@ -1,0 +1,17 @@
+font = poppins
+extrabold, regular, light
+
+nav color = 11055E
+logo color = 75E6DA
+button color = E07EDC
+nav-link-icons-size = 45 45
+
+
+hero color = 05295E
+
+summary-corner-color = C3DBFF
+
+skills-icon = 50 52
+skills-icon-color = E07EDC
+
+footer-icon-size = 60 60

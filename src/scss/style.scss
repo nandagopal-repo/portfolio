@@ -1,0 +1,305 @@
+@import 'variables';
+@import 'global';
+
+header{
+    .icon-container{
+        display: none;
+    }
+    
+    .nav-icons{
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border: 1px solid transparent;
+        transition:  border-color 250ms ease;
+        &:hover{
+            border-color: black;
+        }
+    }
+}
+
+nav{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $dark;
+
+    .logo-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .logo{
+        color: $light;
+    }
+
+    .link-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links{
+        a{
+          color: white;
+          margin: 10px;
+          font-size: 1.2rem;  
+          padding: 5px;
+          border: 1px solid transparent;
+          transition: border-color 250ms ease;
+
+           &:hover{
+                border-color: white;
+            }
+        }
+    }
+
+}
+
+
+// .hero-section
+.hero-container{
+    .hero-design-container{
+        .hero-design{
+            display: none
+        }
+    }
+}
+
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    padding: 10%;
+    background-color: $blue;
+
+    .hero-text{
+        color: white;
+        font-size: 4rem;
+        text-transform: capitalize;
+        margin: 20px 0px;
+        margin-bottom: 40px;
+        font-family: 'Orbitron', sans-serif;;
+        font-weight: 700;
+    }
+
+    .hero-btn{
+        cursor: pointer;
+        background: $pink;
+        color: rgb(53, 52, 52);
+        padding: .5rem .9rem;
+        border: 2px solid transparent;
+        transition: border-color 250ms ease;
+
+        &:hover{
+            border-color: white;
+        }
+    }
+
+    .switch{
+        display: none;
+    }
+}
+
+// summary
+.summary-section{
+    padding: 20px 40px;
+
+    .content-overlay{
+        padding-left: 40px;
+        z-index: 1;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 200px;
+            height: 200px;
+            top: -30px;
+            left: -40px;
+            border-radius: 50%;
+            background: $summary-blue;
+            z-index: -1;
+        }
+    }
+
+    .section-heading{
+        text-transform: capitalize;
+        margin: 10px 0px;
+        font-size: 3rem;
+        font-weight: 400;      
+    }
+
+    .summary-para{
+        margin: 20px 0px;
+        font-weight: 400;
+        font-size: 1.2rem;
+        max-width: 60ch;
+    }
+}
+
+// skills section
+.skill-section{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: $light;
+
+    .card{
+        background-color: white;
+        border-radius: 20px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-img{
+        margin: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .card-heading{
+        text-transform: capitalize;
+        font-size: 2rem;
+        margin: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .card-para{
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin: 20px;
+        margin-top: 0px;
+    }
+    .tool-img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+// project-section
+.project-section{
+    padding: 20px;
+    background-color: white;
+
+    .section-heading{
+        font-size: 3rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin-top: 50px;
+        margin-left: 15%;
+    }
+  
+    .project-container{
+        width: 100%;
+        margin: 40px 0px;
+        margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .project-card{
+        background-color: $light;
+        padding: 30px;
+        padding-top: 50px;
+        margin: 0px 40px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+    }
+    .project-title{
+        margin: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 2rem;
+    }
+    .project-para{
+        margin: 10px 0px;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    .project-link-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .project-btn{
+        width: 60px;
+        background-color: $pink;
+        color: rgb(53, 52, 52);
+        padding: 10px 20px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        transition: border-color 250ms ease;
+
+        &:hover{
+            border-color: black;
+        }
+    }
+
+    .project-img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        margin-bottom: -25px;
+    }
+}
+
+// footer section
+footer{
+    background-color: $blue;
+    padding: 20px;
+    .contact{
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .footer-icons{
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+        border: 1px solid transparent;
+        transition:  border-color 250ms ease;
+        &:hover{
+            border-color: black;
+        }
+    }
+    .email{
+        font-size: 1.5rem;
+        color: black;
+        border: 1px solid transparent;
+        transition:  border-color 250ms ease;
+        &:hover{
+            border-color: black;
+        }
+    }
+    .footer-para{
+        margin-top: 40px;
+        text-align: center;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+}
+
+@import 'mediaquerys';
