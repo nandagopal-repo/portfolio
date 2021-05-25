@@ -1,0 +1,10 @@
+@keyframes animate{
+    0% { 
+        // top: 10px;
+        transform: translateY(0px);
+    }
+    100% {
+        // top: 35px;
+        transform: translateY(25px);
+    }
+}

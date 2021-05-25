@@ -38,6 +38,28 @@ img {
      object-fit: cover;
 }
 
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+}
+
 header .icon-container {
   display: none;
 }
@@ -147,6 +169,7 @@ nav .nav-links a:hover {
   color: #353434;
   padding: .5rem .9rem;
   border: 2px solid transparent;
+  border-radius: 5px;
   -webkit-transition: border-color 250ms ease;
   transition: border-color 250ms ease;
 }
@@ -155,8 +178,27 @@ nav .nav-links a:hover {
   border-color: white;
 }
 
-.hero-section .switch {
-  display: none;
+.hero-section .indicator {
+  margin: 50px 0px;
+  width: 30px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  position: relative;
+}
+
+.hero-section .indicator::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 10px;
+  border-radius: 50%;
+  animation: animate 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite alternate-reverse;
 }
 
 .summary-section {
@@ -438,10 +480,26 @@ footer .footer-para {
             justify-content: space-between;
   }
   .logo {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  .hero-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .hero-section .hero-text {
     font-size: 3rem;
+    text-align: center;
   }
   .summary {
     padding: 10px;
